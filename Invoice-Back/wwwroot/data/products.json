@@ -1,0 +1,127 @@
+[
+    {
+      "id": 1,
+      "title": "Apple iPhone 14 Pro Max",
+      "price": 1099.99
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S23 Ultra",
+      "price": 1199.99
+    },
+    {
+      "id": 3,
+      "title": "Sony WH-1000XM5 Wireless Headphones",
+      "price": 399.99
+    },
+    {
+      "id": 4,
+      "title": "Bose QuietComfort 45 Bluetooth Headphones",
+      "price": 329.95
+    },
+    {
+      "id": 5,
+      "title": "Dell XPS 15 Laptop",
+      "price": 1999.99
+    },
+    {
+      "id": 6,
+      "title": "Apple MacBook Pro 16-inch",
+      "price": 2499.99
+    },
+    {
+      "id": 7,
+      "title": "HP Spectre x360 14 Laptop",
+      "price": 1199.99
+    },
+    {
+      "id": 8,
+      "title": "LG C2 65-inch OLED 4K Smart TV",
+      "price": 2499.99
+    },
+    {
+      "id": 9,
+      "title": "Sony A7 IV Full-Frame Mirrorless Camera",
+      "price": 2499.99
+    },
+    {
+      "id": 10,
+      "title": "Canon EOS R6 Mark II Full-Frame Mirrorless Camera",
+      "price": 2499.99
+    },
+    {
+      "id": 11,
+      "title": "Nikon Z7 II Full-Frame Mirrorless Camera",
+      "price": 2999.95
+    },
+    {
+      "id": 12,
+      "title": "Garmin Fenix 7X Solar Smartwatch",
+      "price": 699.99
+    },
+    {
+      "id": 13,
+      "title": "Apple Watch Series 8",
+      "price": 399.99
+    },
+    {
+      "id": 14,
+      "title": "Fitbit Sense 2 Advanced Smartwatch",
+      "price": 299.95
+    },
+    {
+      "id": 15,
+      "title": "GoPro Hero 11 Black Action Camera",
+      "price": 399.99
+    },
+    {
+      "id": 16,
+      "title": "DJI Mavic 3 Cine Premium Combo Drone",
+      "price": 4999.00
+    },
+    {
+      "id": 17,
+      "title": "Sony WH-1000XM5 Wireless Earbuds",
+      "price": 279.99
+    },
+    {
+      "id": 18,
+      "title": "Bose QuietComfort Earbuds II",
+      "price": 249.95
+    },
+    {
+      "id": 19,
+      "title": "JBL Flip 6 Portable Bluetooth Speaker",
+      "price": 129.95
+    },
+    {
+      "id": 20,
+      "title": "Sony SRS-XB43 EXTRA BASS Portable Bluetooth Speaker",
+      "price": 199.99
+    },
+    {
+      "id": 21,
+      "title": "Apple AirPods Pro (2nd Generation)",
+      "price": 249.99
+    },
+    {
+      "id": 22,
+      "title": "Samsung Galaxy Buds Pro 2",
+      "price": 199.99
+    },
+    {
+      "id": 23,
+      "title": "Google Pixel Buds Pro",
+      "price": 199.99
+    },
+    {
+      "id": 24,
+      "title": "Amazon Echo Dot (5th Gen) Smart Speaker",
+      "price": 49.99
+    },
+    {
+      "id": 25,
+      "title": "Google Nest Audio Smart Speaker",
+      "price": 99.99
+    }
+  ]

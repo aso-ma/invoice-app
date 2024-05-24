@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Invoice #1",
+        "customerId": 1,
+        "created_at": "2024-04-08T12:01:33",
+        "items": [
+            {"productId": 1,  "count": 2},
+            {"productId": 2,  "count": 1}
+        ]
+    }, 
+    {
+        "id": 2,
+        "title": "Invoice #2",
+        "customerId": 3,
+        "created_at": "2024-04-21T16:21:43",
+        "items": [
+            {"productId": 5,  "count": 4},
+            {"productId": 9,  "count": 1},
+            {"productId": 10,  "count": 1}
+        ]
+    }
+]
