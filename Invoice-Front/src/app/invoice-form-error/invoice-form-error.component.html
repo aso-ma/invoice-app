@@ -1,0 +1,18 @@
+<div class="border border-danger rounded " *ngIf="formGroup.invalid" ngbAccordion>
+	<div class="bg-danger-subtle" ngbAccordionItem [collapsed]="true">
+		<h2 ngbAccordionHeader>
+			<button class="border border-0 bg-danger-subtle text-danger text-start" ngbAccordionButton>Form Errors</button>
+		</h2>
+		<div ngbAccordionCollapse>
+			<div ngbAccordionBody>
+        <ng-template>
+          <ul>
+            <li class="text-start" *ngFor="let error of getErrors()">
+            <p><em>{{error.control}}:</em> {{ error.message }}</p>
+          </ul>
+        </ng-template>
+				
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container m-2">
+    <div class="row">
+        <h1 class="text-center text-primary">
+            {{title}}
+        </h1>
+    </div>
+    <div>
+       
+    <nav>
+        <ul class="nav justify-content-center">
+            <li class="nav-item" *ngFor="let menuItem of menuItems">
+                <a routerLink="{{menuItem.path}}"
+                    [ngClass]="isMenuActive(menuItem.path)">{{menuItem.title}}</a>
+            </li>
+        </ul>   
+    </nav>
+        
+    </div>
+    <hr>
+    <router-outlet></router-outlet>     
+</div>

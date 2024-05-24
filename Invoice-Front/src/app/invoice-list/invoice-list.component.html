@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="text-secondary">Recent Invoices:</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Date</th>
+                <th scope="col">Operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let invoice of invoices">
+                <td class="mx-2">
+                    <a routerLink="/invoices/{{invoice.id}}">{{invoice.title}}</a>
+                </td>
+                <td class="px-2 mx-3">{{invoice.customer}}</td>
+                <td class="px-2 mx-3">{{invoice.total_price}}$</td>
+                <td class="px-2 mx-3">{{invoice.created_at | date:'short'}}</td>
+                <td>
+                    <div class="col">
+                        <a routerLink="/invoices/edit/{{invoice.id}}" class="me-2 btn btn-sm btn-secondary px-2">Edit <i class="bi bi-pencil"></i></a>
+                        <button type="button" ngbAutofocus class="btn btn-danger btn-sm px-2" (click)="openDeleteModal(invoice)">Delete <i class="bi bi-trash"></i></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,67 @@
+<form class="row align-items-start" [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+    <div class="row mb-4">
+        <invoice-form-error [formGroup]="invoiceForm"></invoice-form-error>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <input class="form-control" id="title" type="text" formControlName="title" placeholder="A title for the invoice" required>
+        </div>
+        <div class="col">
+            <input 
+                class="form-control" 
+                type="text" formControlName="customer" 
+                [ngbTypeahead]="searchCustomers" 
+                [resultFormatter]="customerFormatter" 
+                [inputFormatter]="customerFormatter" 
+                (selectItem)="selectCustomer($event.item)" 
+                placeholder="Customer"
+            >
+            <input type="hidden" formControlName="customerId">            
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col input-group w-auto">
+            <input
+                class="form-control"
+                placeholder="Date (yyyy-mm-dd)"
+                formControlName="date"
+                ngbDatepicker
+                #d="ngbDatepicker"
+            />
+            <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+        </div>
+        <div class="col">
+            <ngb-timepicker formControlName="time"></ngb-timepicker>
+        </div>
+    </div>
+    <hr class="my-4"/>
+    <div class="row" formArrayName="items">
+        <h3 class="text-secondary text-start mb-4">Items</h3>
+        <button class="btn btn-primary w-auto mx-2" type="button" (click)="addItem()">+ Add an Item</button>
+        <div style="max-height: 300px;" class="overflow-auto mt-4">
+            <div class="col-12 my-2" [formGroupName]="i" *ngFor="let item of items.controls; let i=index">
+                <div class="d-flex flex-row align-content-center">
+                    <span class="text-nowrap mx-2"># {{i+1}}</span>
+                    <input type="hidden" formControlName="id">
+                    <input
+                        [ngbTypeahead]="searchProducts" 
+                        [resultFormatter]="productFormatter" 
+                        [inputFormatter]="productFormatter" 
+                        (selectItem)="onProductSelected($event.item, i)"
+                        class="form-control me-2 w-50" 
+                        type="text" 
+                        formControlName="title" 
+                        placeholder="Product Title" 
+                    >
+                    <input class="form-control me-2 w-25" type="number" formControlName="price" placeholder="Product Price">
+                    <input class="form-control me-2 w-25" type="number" formControlName="count" placeholder="Product Count">
+                    <div class="w-auto">
+                        <button type="button" (click)="deleteItem(i)" class="btn btn-sm btn-warning text-white w-auto ">Delete <i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <hr class="my-4" />
+    <button class="btn btn-primary w-auto" type="submit" [disabled]="!invoiceForm.valid">Submit</button>
+</form>

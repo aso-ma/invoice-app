@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row mb-4">
+    <h2 class="text-secondary-emphasis">{{invoice?.title}}</h2>
+    <div class="col">
+      <p><em>Customer: </em>{{invoice?.customer?.name}}</p>
+    </div>
+    <div class="col">
+      <p><em>Date: </em>{{invoice?.created_at | date: 'short'}}</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <h3 class="text-secondary">Invoice Items</h3>
+  </div>
+  <div class="row row-cols-4 mb-4">
+    <div class="col" *ngFor="let item of invoice?.items">
+      <div class="card">
+        <h5 class="card-title px-2 pt-4">{{item.product.title}}</h5>
+        <hr />
+        <div class="card-body">
+          <p class="card-text"><em>Price: </em>{{item.product.price}}</p>
+          <p class="card-text"><em>Count: </em>{{item.count}}</p>
+        </div>
+        <div class="card-footer">
+          <h6><em>Amount: </em>{{(item.count * item.product.price).toFixed(2)}}$</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row ">
+    <h4 class="text-primary-emphasis">Total: {{getTotalPrice()}}$</h4>
+  </div>
+</div>
